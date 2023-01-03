@@ -1,0 +1,137 @@
+Link.de.descarga,Genero,Jurisdiccion,Universo,Sector,Dato,Fecha_inicio,Fecha_final
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_todos_total_priv.csv,NO,NO,Privado,NO,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_todos_total_tot_emp.csv,NO,NO,Total empresas,NO,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_todos_total_pub.csv,NO,NO,Público,NO,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_todos_total_total.csv,NO,NO,Total empleo,NO,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_mujer_total_priv.csv,SI,NO,Privado,NO,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_mujer_total_pub.csv,SI,NO,Público,NO,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_mujer_letra_priv.csv,SI,NO,Privado,Letra,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_mujer_letra_tot_emp.csv,SI,NO,Total empresas,Letra,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_mujer_letra_total.csv,SI,NO,Total empleo,Letra,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_mujer_clae2_priv.csv,SI,NO,Privado,CLAE2,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_mujer_clae2_tot_emp.csv,SI,NO,Total empresas,CLAE2,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_mujer_clae2_total.csv,SI,NO,Total empleo,CLAE2,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_todos_clae2_priv.csv,NO,NO,Privado,CLAE2,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_todos_clae2_tot_emp.csv,NO,NO,Total empresas,CLAE2,Percentil Salario,2013-01-01,2022-08-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_todos_clae2_total.csv,NO,NO,Total empleo,CLAE2,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_todos_letra_priv.csv,NO,NO,Privado,Letra,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_todos_letra_tot_emp.csv,NO,NO,Total empresas,Letra,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/percentiles-salarios/percentiles_todos_letra_total.csv,NO,NO,Total empleo,Letra,Percentil Salario,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_priv_por_clae2.csv,NO,Departamento vivienda,Privado,CLAE2,Puestos depto,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_tot_emp_por_clae2.csv,NO,Departamento vivienda,Total empresas,CLAE2,Puestos depto,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_total_por_clae2.csv,NO,Departamento vivienda,Total empleo,CLAE2,Puestos depto,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_priv_por_letra.csv,NO,Departamento vivienda,Privado,Letra,Puestos depto,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_tot_emp_por_letra.csv,NO,Departamento vivienda,Total empresas,Letra,Puestos depto,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_total_por_letra.csv,NO,Departamento vivienda,Total empleo,Letra,Puestos depto,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_priv.csv,NO,Departamento vivienda,Privado,NO,Puestos depto,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_tot_emp.csv,NO,Departamento vivienda,Total empresas,NO,Puestos depto,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_pub.csv,NO,Departamento vivienda,Público,NO,Puestos depto,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_total.csv,NO,Departamento vivienda,Total empleo,NO,Puestos depto,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-median/w_median_privado_mensual_por_clae6.csv,NO,NO,Privado,CLAE6,Salario mediano,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-median/w_median_privado_mensual_por_clae3.csv,NO,NO,Privado,CLAE3,Salario mediano,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-median/w_median_privado_mensual_por_clae2.csv,NO,NO,Privado,CLAE2,Salario mediano,2007-01-01,2022-10-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-median/w_median_privado_mensual_por_letra.csv,NO,NO,Privado,Letra,Salario mediano,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-median/w_median_privado_total.csv,NO,NO,Privado,NO,Salario mediano,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-median/w_median_total_empresas_mensual_por_clae6.csv,NO,NO,Total empresas,CLAE6,Salario mediano,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-median/w_median_total_empresas_mensual_por_clae3.csv,NO,NO,Total empresas,CLAE3,Salario mediano,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-median/w_median_total_empresas_mensual_por_clae2.csv,NO,NO,Total empresas,CLAE2,Salario mediano,2007-01-01,2021-12-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-median/w_median_total_empresas_mensual_por_letra.csv,NO,NO,Total empresas,Letra,Salario mediano,2007-01-01,2021-12-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-median/w_median_total_empresas_total.csv,NO,NO,Total empresas,NO,Salario mediano,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-mean/w_mean_privado_mensual_por_clae6.csv,NO,NO,Privado,CLAE6,Salario promedio,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-mean/w_mean_privado_mensual_por_clae3.csv,NO,NO,Privado,CLAE3,Salario promedio,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-mean/w_mean_privado_mensual_por_clae2.csv,NO,NO,Privado,CLAE2,Salario promedio,2007-01-01,2022-10-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-mean/w_mean_privado_mensual_por_letra.csv,NO,NO,Privado,Letra,Salario promedio,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-mean/w_mean_privado_total.csv,NO,NO,Privado,NO,Salario promedio,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-mean/w_mean_total_empresas_mensual_por_clae6.csv,NO,NO,Total empresas,CLAE6,Salario promedio,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-mean/w_mean_total_empresas_mensual_por_clae3.csv,NO,NO,Total empresas,CLAE3,Salario promedio,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-mean/w_mean_total_empresas_mensual_por_clae2.csv,NO,NO,Total empresas,CLAE2,Salario promedio,2007-01-01,2021-12-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-mean/w_mean_total_empresas_mensual_por_letra.csv,NO,NO,Total empresas,Letra,Salario promedio,2007-01-01,2021-12-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/salarios/w-mean/w_mean_total_empresas_total.csv,NO,NO,Total empresas,NO,Salario promedio,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_mean_depto_priv_clae2.csv,NO,Departamento vivienda,Privado,CLAE2,Salario prom por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_mean_depto_tot_emp_clae2.csv,NO,Departamento vivienda,Total empresas,CLAE2,Salario prom por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_mean_depto_total_clae2.csv,NO,Departamento vivienda,Total empleo,CLAE2,Salario prom por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_mean_depto_priv_letra.csv,NO,Departamento vivienda,Privado,Letra,Salario prom por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_mean_depto_tot_emp_letra.csv,NO,Departamento vivienda,Total empresas,Letra,Salario prom por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_mean_depto_total_letra.csv,NO,Departamento vivienda,Total empleo,Letra,Salario prom por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_mean_depto_priv.csv,NO,Departamento vivienda,Privado,NO,Salario prom por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_mean_depto_tot_emp.csv,NO,Departamento vivienda,Total empresas,NO,Salario prom por depto y sector,2014-01-01,2022-08-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_mean_depto_pub.csv,NO,Departamento vivienda,Público,NO,Salario prom por depto y sector,2014-01-01,2022-08-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_mean_depto_total.csv,NO,Departamento vivienda,Total empleo,NO,Salario prom por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_median_depto_priv_clae2.csv,NO,Departamento vivienda,Privado,CLAE2,Salario mediano por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_median_depto_tot_emp_clae2.csv,NO,Departamento vivienda,Total empresas,CLAE2,Salario mediano por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_median_depto_total_clae2.csv,NO,Departamento vivienda,Total empleo,CLAE2,Salario mediano por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_median_depto_priv_letra.csv,NO,Departamento vivienda,Privado,Letra,Salario mediano por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_median_depto_tot_emp_letra.csv,NO,Departamento vivienda,Total empresas,Letra,Salario mediano por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_median_depto_total_letra.csv,NO,Departamento vivienda,Total empleo,Letra,Salario mediano por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_median_depto_priv.csv,NO,Departamento vivienda,Privado,NO,Salario mediano por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_median_depto_pub.csv,NO,Departamento vivienda,Público,NO,Salario mediano por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_median_depto_tot_emp.csv,NO,Departamento vivienda,Total empresas,NO,Salario mediano por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/salarios/w_median_depto_total.csv,NO,Departamento vivienda,Total empleo,NO,Salario mediano por depto y sector,2014-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/puestos/puestos_priv.csv,NO,Provincia trabajo,Privado,CLAE2,Puestos provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/puestos/puestos_prod.csv,NO,Provincia trabajo,Total empresas,CLAE2,Puestos provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/puestos/puestos_todos.csv,NO,Provincia trabajo,Total empleo,CLAE2,Puestos provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/puestos/puestos_priv.csv,NO,Provincia trabajo,Privado,Letra,Puestos provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/puestos/puestos_prod.csv,NO,Provincia trabajo,Total empresas,Letra,Puestos provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/puestos/puestos_todos.csv,NO,Provincia trabajo,Total empleo,Letra,Puestos provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/puestos/puestos_priv.csv,NO,Provincia trabajo,Privado,NO,Puestos provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/puestos/puestos_prod.csv,NO,Provincia trabajo,Total empresas,NO,Puestos provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/puestos/puestos_todos.csv,NO,Provincia trabajo,Total empleo,NO,Puestos provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/salarios/w_mean_priv.csv,NO,Provincia trabajo,Privado,CLAE2,Salario prom por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/salarios/w_mean_prod.csv,NO,Provincia trabajo,Total empresas,CLAE2,Salario prom por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/salarios/w_mean_todos.csv,NO,Provincia trabajo,Total empleo,CLAE2,Salario prom por provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/salarios/w_mean_priv.csv,NO,Provincia trabajo,Privado,Letra,Salario prom por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/salarios/w_mean_prod.csv,NO,Provincia trabajo,Total empresas,Letra,Salario prom por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/salarios/w_mean_todos.csv,NO,Provincia trabajo,Total empleo,Letra,Salario prom por provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/salarios/w_mean_priv.csv,NO,Provincia trabajo,Privado,NO,Salario prom por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/salarios/w_mean_prod.csv,NO,Provincia trabajo,Total empresas,NO,Salario prom por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/salarios/w_mean_todos.csv,NO,Provincia trabajo,Total empleo,NO,Salario prom por provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/salarios/w_median_priv.csv,NO,Provincia trabajo,Privado,CLAE2,Salario mediano por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/salarios/w_median_prod.csv,NO,Provincia trabajo,Total empresas,CLAE2,Salario mediano por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/salarios/w_median_todos.csv,NO,Provincia trabajo,Total empleo,CLAE2,Salario mediano por provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/salarios/w_median_priv.csv,NO,Provincia trabajo,Privado,Letra,Salario mediano por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/salarios/w_median_prod.csv,NO,Provincia trabajo,Total empresas,Letra,Salario mediano por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/salarios/w_median_todos.csv,NO,Provincia trabajo,Total empleo,Letra,Salario mediano por provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/salarios/w_median_priv.csv,NO,Provincia trabajo,Privado,NO,Salario mediano por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/salarios/w_median_prod.csv,NO,Provincia trabajo,Total empresas,NO,Salario mediano por provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/salarios/w_median_todos.csv,NO,Provincia trabajo,Total empleo,NO,Salario mediano por provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/share_mujer/share_mujer_priv.csv,SI,Provincia trabajo,Privado,CLAE2,% Muj provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/share_mujer/share_mujer_prod.csv,SI,Provincia trabajo,Total empresas,CLAE2,% Muj provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/share_mujer/share_mujer_todos.csv,SI,Provincia trabajo,Total empleo,CLAE2,% Muj provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/share-mujer/share_mujer_priv.csv,SI,Provincia trabajo,Privado,Letra,% Muj provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/share-mujer/share_mujer_prod.csv,SI,Provincia trabajo,Total empresas,Letra,% Muj provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-letra/share-mujer/share_mujer_todos.csv,SI,Provincia trabajo,Total empleo,Letra,% Muj provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/share-mujer/share_mujer_priv.csv,SI,Provincia trabajo,Privado,NO,% Muj provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/share-mujer/share_mujer_prod.csv,SI,Provincia trabajo,Total empresas,NO,% Muj provincia y sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/share-mujer/share_mujer_todos.csv,SI,Provincia trabajo,Total empleo,NO,% Muj provincia y sector,2013-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-facturacion/fact_por_letra.csv,NO,NO,NO,Letra,Var. mediana facturación,2019-01-01,2022-02-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-facturacion/fact_por_total.csv,NO,NO,Total empleo,NO,Var. mediana facturación,2019-01-01,2022-02-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-facturacion/fact_por_codigo_departamento_indec.csv,NO,Departamento fiscal,NO,NO,Var. mediana facturación,2019-01-01,2022-02-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-facturacion/fact_por_clae3.csv,NO,NO,NO,CLAE3,Var. mediana facturación,2019-01-01,2022-02-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-facturacion/fact_por_prov_sector.csv,NO,Provincia vivienda,NO,Letra,Var. mediana facturación,2019-01-01,2022-02-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-facturacion/fact_por_depto_sector.csv,NO,Departamento fiscal,NO,Letra,Var. mediana facturación,2019-01-01,2022-02-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/puestos/puestos_privados_mensual_por_clae6.csv,NO,NO,Privado,CLAE6,Puestos por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/puestos/puestos_privados_mensual_por_clae3.csv,NO,NO,Privado,CLAE3,Puestos por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/puestos/puestos_privados_mensual_por_clae2.csv,NO,NO,Privado,CLAE2,Puestos por sector,2007-01-01,2022-10-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/puestos/puestos_privados_mensual_por_letra.csv,NO,NO,Privado,Letra,Puestos por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/puestos/puestos_privados_mensual_total.csv,NO,NO,Privado,NO,Puestos por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/puestos/puestos_total_empresas_mensual_por_clae6.csv,NO,NO,Total empresas,CLAE6,Puestos por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/puestos/puestos_total_empresas_mensual_por_clae3.csv,NO,NO,Total empresas,CLAE3,Puestos por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/puestos/puestos_total_empresas_mensual_por_clae2.csv,NO,NO,Total empresas,CLAE2,Puestos por sector,2007-01-01,2021-12-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/puestos/puestos_total_empresas_mensual_por_letra.csv,NO,NO,Total empresas,Letra,Puestos por sector,2007-01-01,2021-12-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/puestos/puestos_total_empresas_mensual_total.csv,NO,NO,Total empresas,NO,Puestos por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/empleadoras/empleadoras_privadas_por_clae6.csv,NO,NO,Privado,CLAE6,Cant empleadoras,2007-01-01,2022-08-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/empleadoras/empleadoras_privadas_por_clae3.csv,NO,NO,Privado,CLAE3,Cant empleadoras,2007-01-01,2022-08-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/empleadoras/empleadoras_privadas_por_clae2.csv,NO,NO,Privado,CLAE2,Cant empleadoras,2007-01-01,2022-08-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/empleadoras/empleadoras_privadas_por_letra.csv,NO,NO,Privado,Letra,Cant empleadoras,2007-01-01,2022-08-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/empleadoras/empleadoras_total_empresas_por_clae6.csv,NO,NO,Total empresas,CLAE6,Cant empleadoras,2007-01-01,2022-08-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/empleadoras/empleadoras_total_empresas_por_clae3.csv,NO,NO,Total empresas,CLAE3,Cant empleadoras,2007-01-01,2022-08-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_clae6.csv,SI,NO,Privado,CLAE6,% Muj por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_clae3.csv,SI,NO,Privado,CLAE3,% Muj por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_clae2.csv,SI,NO,Privado,CLAE2,% Muj por sector,2007-01-01,2022-10-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_letra.csv,SI,NO,Privado,Letra,% Muj por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_total.csv,SI,NO,Privado,NO,% Muj por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_clae6.csv,SI,NO,Total empresas,CLAE6,% Muj por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_clae3.csv,SI,NO,Total empresas,CLAE3,% Muj por sector,2007-01-01,2022-09-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_clae2.csv,SI,NO,Total empresas,CLAE2,% Muj por sector,2007-01-01,2021-12-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_letra.csv,SI,NO,Total empresas,Letra,% Muj por sector,2007-01-01,2021-12-01
+https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_total.csv,SI,NO,Total empresas,NO,% Muj por sector,2007-01-01,2022-09-01
