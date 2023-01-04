@@ -28,12 +28,12 @@ universo_posible <- unique(datos$Universo)
 sector_posible <- unique(datos$Sector)
 
 # Armar funcion para descargar dato 
-descarga_DA <- function(tipo,genero,jurisdiccion,universo,sector,index){
-  if((missing(sector) | missing(universo) | missing(jurisdiccion) | missing(genero) | missing(tipo)) & missing(index)) {
+descarga_DA <- function(tipo,genero,jurisdiccion,universo,sector,index_base){
+  if((missing(sector) | missing(universo) | missing(jurisdiccion) | missing(genero) | missing(tipo)) & missing(index_base)) {
     warning("Indicar todos los parámetros: tipo, genero, jurisdiccion, universo y sector. En caso contrario, indicar valor de index")
-  } else if ((missing(sector) | missing(universo) | missing(jurisdiccion) | missing(genero) | missing(tipo)) & !missing(index)) {
+  } else if ((missing(sector) | missing(universo) | missing(jurisdiccion) | missing(genero) | missing(tipo)) & !missing(index_base)) {
     tmp <- dplyr::filter(datos,
-                         index == index)
+                         index==index_base)
     tmp <- readr::read_csv(tmp$Link.de.descarga[1],show_col_types = F)
     return(tmp)
   } else {
