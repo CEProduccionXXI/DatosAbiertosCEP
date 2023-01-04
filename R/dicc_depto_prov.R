@@ -23,7 +23,7 @@ dicc_depto_prov <- function(data) {
     columnas_agregacion <- columnas_agregacion[columnas_agregacion %in% c('codigo_departamento_indec','id_provincia_indec')]
     #Joinear con los datos seleccionados 
     data <- merge(data,dicc_depto,by=columnas_agregacion,all.x=T,sort = F)
-    data <- as_tibble(data)
+    data <- dplyr::as_tibble(data)
     return(data)
   } else {
     stop(paste0('Los datos solicitados no presentan agregación alguna actualmente, por lo que no es posible añadir nuevas agregaciones.'))
