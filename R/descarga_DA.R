@@ -6,7 +6,7 @@
 #' 
 #' @name descarga_DA
 #' 
-#' @param index Valor que toma la columna en el dataset que se quiere descargar
+#' @param index_base Valor que toma la columna en el dataset que se quiere descargar
 #' @param genero Puede tomar valor SI o NO
 #' @param jurisdiccion Puede tomar los siguientes valores: NO, Departamento vivienda, Provincia trabajo, Departamento fiscal, Provincia vivienda
 #' @param universo Puede tomar los siguientes valores: NO, Privado, Total empresas, Público, Total empleo
