@@ -19,11 +19,11 @@
 load("data/da_urls.rda")
 
 # Armar listados por tipo de datos 
-nombre_dato <- unique(datos$Dato)
-genero_posible <- unique(datos$Genero)
-jurisdiccion_posible <- unique(datos$Jurisdiccion)
-universo_posible <- unique(datos$Universo)
-sector_posible <- unique(datos$Sector)
+nombre_dato <- unique(da_urls$Dato)
+genero_posible <- unique(da_urls$Genero)
+jurisdiccion_posible <- unique(da_urls$Jurisdiccion)
+universo_posible <- unique(da_urls$Universo)
+sector_posible <- unique(da_urls$Sector)
 
 # Armar diccionario de datos posibles de descargar 
 DA_cruces_existentes <- function(tipo,genero,jurisdiccion,universo,sector){
@@ -43,17 +43,18 @@ DA_cruces_existentes <- function(tipo,genero,jurisdiccion,universo,sector){
     sector <- sector_posible
   }
   tmp <- dplyr::filter(
-    datos,Dato %in%c(tipo),
+    da_urls,Dato %in%c(tipo),
     Genero %in% c(genero),
     Jurisdiccion %in% c(jurisdiccion),
     Universo %in% (universo),
     Sector %in% c(sector)
   )
   tmp$Link.de.descarga <-NULL
-  tmp <- dplyr::select(tmp,Dato,dplyr::everything())
+  tmp <- dplyr::select(tmp,index,Dato,Universo,Sector,Jurisdiccion,Genero,Fecha_inicio,Fecha_final)
   # tmp <- tmp %>% 
   #   select(Dato,everything())
   # #View(tmp)
   return(tmp)
 }
+
 
