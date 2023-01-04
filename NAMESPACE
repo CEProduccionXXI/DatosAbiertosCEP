@@ -2,3 +2,5 @@
 
 export(DA_cruces_existentes)
 export(descarga_DA)
+export(dicc_depto_prov)
+export(diccionario_sectores)
