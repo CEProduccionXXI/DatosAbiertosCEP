@@ -6,7 +6,7 @@
 #' 
 #' @name descarga_DA
 #' 
-#' @param index_base Valor que toma la columna en el dataset que se quiere descargar
+#' @param index Valor que toma la columna en el dataset que se quiere descargar
 #' @param genero Puede tomar valor SI o NO
 #' @param jurisdiccion Puede tomar los siguientes valores: NO, Departamento vivienda, Provincia trabajo, Departamento fiscal, Provincia vivienda
 #' @param universo Puede tomar los siguientes valores: NO, Privado, Total empresas, Público, Total empleo
@@ -19,7 +19,7 @@
 
 #Cargar URLs
 #save(datos, file = "data/Descargar DA - URL - Datasets.rda", version = 2)
-load("data/da_urls.rda")
+load(url('https://github.com/nsidicarocep/DatosAbiertosCEP/blob/main/data/da_urls.rda?raw=true'))
 
 # Armar listados por tipo de datos 
 nombre_dato <- unique(da_urls$Dato)
