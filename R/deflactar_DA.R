@@ -28,7 +28,10 @@ deflactar_DA <- function(data,mes_base){
     data <- dplyr::mutate(data,indice_mes_base = tmp$indice)
     data <- dplyr::left_join(data,ipc_base_2016,by='fecha')
     data <- dplyr::mutate(data,indice_mes_base = indice_mes_base / indice)
-    data <- mutate(data,precio_constante = !!sym(variable_actual)*indice_mes_base)
+    data <- data %>% mutate(across(starts_with(variable_actual),
+                             ~ .x *indice_mes_base,
+                             .names="{.col}_constante"
+    ))
     data <- data %>% select(variables_base,precio_constante)
     return(data) 
   } else if (length(variable_actual)>1){
