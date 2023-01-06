@@ -10,5 +10,6 @@ tablero_provincial()
 A matrix of the infile
 }
 \description{
-La función se utiliza para correr el script que abre un tablero dinámico en shiny.
+La función se utiliza abrir un tablero dinámico en Shiny.
+Este tablero se utiliza para analizar la información agregada a nivel provincial
 }

@@ -12,6 +12,6 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 LazyData: true
 Imports: 
-	tidyverse, 
-	shiny,
-	gt
+	dplyr,
+	readr, 
+	shiny

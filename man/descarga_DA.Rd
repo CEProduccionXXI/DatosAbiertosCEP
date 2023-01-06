@@ -4,7 +4,7 @@
 \alias{descarga_DA}
 \title{Funciones para descargar Datos de Datos Abiertos}
 \arguments{
-\item{index_base}{Valor que toma la columna en el dataset que se quiere descargar}
+\item{index}{Valor que toma la columna en el dataset que se quiere descargar}
 
 \item{genero}{Puede tomar valor SI o NO}
 
