@@ -32,7 +32,7 @@ deflactar_DA <- function(data,mes_base){
                              ~ .x *indice_mes_base,
                              .names="{.col}_constante"
     ))
-    data <- data %>% select(variables_base,precio_constante)
+    data <- data %>% select(starts_with(variables_base))
     return(data) 
   } else if (length(variable_actual)>1){
     tmp <- dplyr::filter(ipc_base_2016,fecha == mes_base)
