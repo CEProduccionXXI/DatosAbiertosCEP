@@ -22,11 +22,26 @@ deflactar_DA <- function(data,mes_base){
   variable_actual <- names(data)
   variables_base <- names(data)
   variable_actual <- variable_actual[variable_actual %in% variables_monetarias]
-  tmp <- dplyr::filter(ipc_base_2016,fecha == mes_base)
-  data <- dplyr::mutate(data,indice_mes_base = tmp$indice)
-  data <- dplyr::left_join(data,ipc_base_2016,by='fecha')
-  data <- dplyr::mutate(data,indice_mes_base = indice_mes_base / indice)
-  data <- mutate(data,precio_constante = !!sym(variable_actual)*indice_mes_base)
-  data <- data %>% select(variables_base,precio_constante)
-  return(data)
+  # Ver si solo hay una variable monetaria o más de una 
+  if(length(variable_actual)==1){
+    tmp <- dplyr::filter(ipc_base_2016,fecha == mes_base)
+    data <- dplyr::mutate(data,indice_mes_base = tmp$indice)
+    data <- dplyr::left_join(data,ipc_base_2016,by='fecha')
+    data <- dplyr::mutate(data,indice_mes_base = indice_mes_base / indice)
+    data <- mutate(data,precio_constante = !!sym(variable_actual)*indice_mes_base)
+    data <- data %>% select(variables_base,precio_constante)
+    return(data) 
+  } else if (length(variable_actual)>1){
+    tmp <- dplyr::filter(ipc_base_2016,fecha == mes_base)
+    data <- dplyr::mutate(data,indice_mes_base = tmp$indice)
+    data <- dplyr::left_join(data,ipc_base_2016,by='fecha')
+    data <- dplyr::mutate(data,indice_mes_base = indice_mes_base / indice)
+    data <- data %>% 
+      mutate(across(starts_with(variable_actual),
+                    ~ .x *indice_mes_base,
+                    .names="{.col}_constante"
+                    ))
+    data <- data %>% 
+      select(starts_with(variables_base))
+  }
 }
