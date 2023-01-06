@@ -15,7 +15,6 @@
 
 # Armar funcion
 diccionario_sectores <- function(data, agregacion_deseada = c('clae6','clae3','clae2','letra'),descripciones=T) {
-  load(r'(C:\Users\Usuario\Documents\DatosAbiertosCEP\data\diccionario_sectores.rda)')
   # Seleccionar agregacion actual de los datos 
   posibles_agregaciones <- c('clae6','clae3','clae2','letra')
   agregacion_actual <- dplyr::select(data,starts_with(posibles_agregaciones))
