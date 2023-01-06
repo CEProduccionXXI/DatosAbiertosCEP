@@ -15,7 +15,7 @@ El paquete actualmente cuenta con las siguientes funciones:
 
 - **`dicc_depto_prov()`**: permite agregar fácilmente el departamento y la provincia a la que pertenece cada dato, en caso de estar desagregado a nivel departamental.
 
-- **`tablero_provincial`**: genera un tablero en shiny en el que se puede analizar la información que tiene datos de la provincia en la que ocurre la relación laboral
+- **`tablero_provincial()`**: genera un tablero en shiny en el que se puede analizar la información que tiene datos de la provincia en la que ocurre la relación laboral
 
 A su vez, el paquete permite acceder rápidamente al diccionario de departamentos y de sectores utilizado. Para ello se deberá escribir `dicc_depto` y `dicc_sector` respectivamente. 
 
@@ -92,6 +92,8 @@ test <- descarga_DA(index_base = 19) # Para descargar alguna base que tenga depa
 test <- dicc_depto_prov(test) # Nombre de la base a la que se quiere añadir la información
 
 ```
+
+Para armar el tablero es necesario ejecutar la función **``tablero_proncial()``**. Con esto ya se abrirá el tablero. En caso de que el cuadro abierto quede gris se deberá apretar en "abrir en navegador" para visualizar el tablero. 
 
 ## Aportes 
 El paquete actualmente se encuentra en desarrollo, por lo que se irá actualizando con el correr de los meses. 
