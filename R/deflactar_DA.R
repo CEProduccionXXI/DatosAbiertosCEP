@@ -15,6 +15,7 @@ deflactar_DA <- function(data,mes_base){
   #Librerias
   require(DatosAbiertosCEP)
   require(dplyr)
+  ipc_base_2016 <- load(url('https://github.com/nsidicarocep/DatosAbiertosCEP/blob/main/data/ipc_base_2016.rda?raw=true'))
   # Detectar variables salariales 
   variables_monetarias <- c('p10','p25','w_mean','w_median','p75','p90','p99')
   # Elegir variable monetaria presente en la base actual
