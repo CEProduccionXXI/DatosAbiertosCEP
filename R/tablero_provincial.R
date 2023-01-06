@@ -8,5 +8,5 @@
 #' @export
 
 tablero_provincial <- function(){
-  shiny::runApp(r'(R\shiny_app.R)')
+  shiny::runApp('R/shiny_app.R')
 }
