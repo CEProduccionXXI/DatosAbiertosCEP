@@ -52,6 +52,9 @@ descarga_DA <- function(tipo,genero,jurisdiccion,universo,sector,index_base,show
                          Universo == universo,
                          Sector == sector)
     base_seleccionada <- tmp
+    if(length(base_seleccionada$Dato)==0){
+      stop(paste0('Alguno de los valores seleccionados en los parámetros es incorrecto.\nNo existe la base solicitada.'))
+    }
     tmp <- readr::read_csv(tmp$Link.de.descarga[1],show_col_types = F)
     if(show_info_DA==T){
       message(paste0('Se descargó la base',unique(base_seleccionada$titulo_base),'. \nDescripción de la base: ',base_seleccionada$descripcion_base,'\nPuede encontrarse la metodología en: ',base_seleccionada$Metodologia))
