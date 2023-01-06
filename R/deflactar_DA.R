@@ -46,5 +46,8 @@ deflactar_DA <- function(data,mes_base){
                     ))
     data <- data %>% 
       select(starts_with(variables_base))
-  }
+  } else {
+    warning(paste0('La base seleccionada no cuenta con variables que puedan interpretarse como monetarias en esta función.\nPor lo tanto, no se ejecutó ninguna modificación'))
+    return(data)
+    }
 }
