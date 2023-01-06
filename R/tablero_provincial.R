@@ -41,7 +41,8 @@ tablero_provincial <- function(){
           tabPanel('Gráfico',
                    plotly::plotlyOutput('pride_plot')
           )
-        )
+        ),
+        downloadButton("downloadData", "Descargar datos")
       )
     ),
     server = function(input, output) {
@@ -69,6 +70,21 @@ tablero_provincial <- function(){
           plotly::add_lines(x = x1, y = y1, name = "Red") 
         
       })
+      output$downloadData <- 
+        downloadHandler(
+          filename = function() {
+            paste(input$tabla_dato, '_', input$tabla_universo, "_", input$tabla_provincia, '_', Sys.Date(), ".csv", sep="")
+          },
+          content = function(file) {
+            bu <- DatosAbiertosCEP::descarga_DA(tipo=input$tabla_dato,
+                                                jurisdiccion = 'Provincia trabajo',
+                                                sector = 'NO',
+                                                genero = 'NO',
+                                                universo = input$tabla_universo,
+                                                show_info_DA = F) %>%
+              filter(zona_prov == input$tabla_provincia)
+            write.csv(bu, file)
+          })
     }
   ) 
 }
