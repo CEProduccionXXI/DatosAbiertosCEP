@@ -13,7 +13,9 @@ El paquete actualmente cuenta con las siguientes funciones:
 
 - **`diccionario_sectores()`**: permite sumar niveles de agregación sectorial a los datos descargados. Por ejemplo, en caso de descargar información a tres dígitos (clae3) con esta función se puede agregar el clae2 y la letra a la que pertenece ese sector, junto con las descripciones de cada desagregación sectorial
 
-- **`dicc_depto_prov()`**: permite agregar fácilmente el departamento y la provincia a la que pertenece cada dato, en caso de estar desagregado a nivel departamental. 
+- **`dicc_depto_prov()`**: permite agregar fácilmente el departamento y la provincia a la que pertenece cada dato, en caso de estar desagregado a nivel departamental.
+
+- **`tablero_provincial`**: genera un tablero en shiny en el que se puede analizar la información que tiene datos de la provincia en la que ocurre la relación laboral
 
 A su vez, el paquete permite acceder rápidamente al diccionario de departamentos y de sectores utilizado. Para ello se deberá escribir `dicc_depto` y `dicc_sector` respectivamente. 
 
