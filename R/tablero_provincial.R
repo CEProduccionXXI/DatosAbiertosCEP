@@ -35,6 +35,16 @@ tablero_provincial <- function(){
                       "RIO NEGRO", "SALTA", "SAN JUAN", "SAN LUIS", "SANTA CRUZ", "SANTA FE", "SANTIAGO DEL ESTERO",
                       "TIERRA DEL FUEGO", "TUCUMAN")
         ),
+        selectInput(
+          inputId = "tabla_deflactar",
+          label = "Precios constantes:",
+          choices = c("NO", "SI")
+        ),
+        textInput(
+          inputId = 'tabla_mes_base',
+          label='Mes base: ',
+          value = '2022-09-01'
+        ),
         htmlOutput('text_header'),
         br(),
         tabsetPanel(
@@ -57,7 +67,13 @@ tablero_provincial <- function(){
                                             universo = input$tabla_universo,
                                             show_info_DA = F)
         bu <- dplyr::filter(bu,zona_prov == input$tabla_provincia)
-        
+        if(input$tabla_deflactar=='SI'){
+          largo_original <- length(bu)
+          bu <- deflactar_DA(bu,input$tabla_mes_base)
+          if(largo_original < length(bu)) {
+            bu[,3] <- NULL
+          }
+        }
         variable <- names(bu[,3])
         # plotly::plot_ly(
         #   data = bu,
@@ -85,6 +101,13 @@ tablero_provincial <- function(){
                                                 universo = input$tabla_universo,
                                                 show_info_DA = F) %>%
               filter(zona_prov == input$tabla_provincia)
+            if(input$tabla_deflactar=='SI'){
+              largo_original <- length(bu)
+              bu <- deflactar_DA(bu,input$tabla_mes_base)
+              if(largo_original < length(bu)) {
+                bu[,3] <- NULL
+              }
+            }
             write.csv(bu, file)
           })
       
@@ -101,6 +124,13 @@ tablero_provincial <- function(){
                                                 universo = input$tabla_universo,
                                                 show_info_DA = F) %>%
               filter(zona_prov == input$tabla_provincia)
+            if(input$tabla_deflactar=='SI'){
+              largo_original <- length(bu)
+              bu <- deflactar_DA(bu,input$tabla_mes_base)
+              if(largo_original < length(bu)) {
+                bu[,3] <- NULL
+              }
+            }
             openxlsx::write.xlsx(bu, file)
           })
     }
