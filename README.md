@@ -11,6 +11,8 @@ El paquete actualmente cuenta con las siguientes funciones:
 
 - **`DA_cruces_existentes()`**: permite ver las diferentes bases disponibilizadas junto a al nivel de desagregación disponible; 
 
+- **`deflactar_DA()`**: permite llevar a precios constantes los valores monetarios de las bases;  
+
 - **`diccionario_sectores()`**: permite sumar niveles de agregación sectorial a los datos descargados. Por ejemplo, en caso de descargar información a tres dígitos (clae3) con esta función se puede agregar el clae2 y la letra a la que pertenece ese sector, junto con las descripciones de cada desagregación sectorial
 
 - **`dicc_depto_prov()`**: permite agregar fácilmente el departamento y la provincia a la que pertenece cada dato, en caso de estar desagregado a nivel departamental.
@@ -90,6 +92,15 @@ datos <- diccionario_sectores(datos, # Nombre de la base a la que se quiere aña
 # Añadir departamento 
 test <- descarga_DA(index_base = 19) # Para descargar alguna base que tenga departamento 
 test <- dicc_depto_prov(test) # Nombre de la base a la que se quiere añadir la información
+
+```
+
+También es posible llevar a precios constantes los valores monetarios, escogiendo la tabla que se quiere deflactar/inflar y el mes base sobre el que se quiere operar. De esta manera, el código genera nuevas variables con los valores constantes. 
+
+```r
+# Llevar a precios constantes los valores monetarios 
+test <- descarga_DA(index_base = 1) #Para descargar alguna base que tenga valores monetarios
+test <- deflactar_DA(data = test,mes_base='2022-11-01')
 
 ```
 
