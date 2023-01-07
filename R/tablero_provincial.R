@@ -11,6 +11,8 @@
 tablero_provincial <- function(){
   require(shiny)
   require(dplyr)
+  require(ggplot2)
+  options(scipen = 999)
   shinyApp(
     # Define UI for application that draws a histogram
     ui= fluidPage(
@@ -33,7 +35,9 @@ tablero_provincial <- function(){
           choices = c("BUENOS AIRES", "CAPITAL FEDERAL", "CATAMARCA", "CHACO", "CHUBUT", "CORDOBA", "CORRIENTES",
                       "ENTRE RIOS", "FORMOSA", "JUJUY", "LA PAMPA", "LA RIOJA", "MENDOZA", "MISIONES", "NEUQUEN",
                       "RIO NEGRO", "SALTA", "SAN JUAN", "SAN LUIS", "SANTA CRUZ", "SANTA FE", "SANTIAGO DEL ESTERO",
-                      "TIERRA DEL FUEGO", "TUCUMAN")
+                      "TIERRA DEL FUEGO", "TUCUMAN"),
+          multiple = T,
+          selected = 'BUENOS AIRES'
         ),
         selectInput(
           inputId = "tabla_deflactar",
@@ -66,7 +70,7 @@ tablero_provincial <- function(){
                                             genero = 'NO',
                                             universo = input$tabla_universo,
                                             show_info_DA = F)
-        bu <- dplyr::filter(bu,zona_prov == input$tabla_provincia)
+        bu <- dplyr::filter(bu,zona_prov %in% input$tabla_provincia)
         if(input$tabla_deflactar=='SI'){
           largo_original <- length(bu)
           bu <- deflactar_DA(bu,input$tabla_mes_base)
@@ -84,8 +88,18 @@ tablero_provincial <- function(){
         x1 <- bu[[1]]
         y1 <- bu[[3]]
         
-        plotly::plot_ly(bu) %>%
-          plotly::add_lines(x = x1, y = y1, name = "Red") 
+        plot <- ggplot(bu,aes(fecha,!!sym(variable))) + 
+          geom_line(aes(color = zona_prov)) +
+          scale_x_date(date_breaks = "8 months" , date_labels = "%b-%y") +
+          xlab('Mes') + 
+          ylab('') + 
+          theme_bw() + 
+          theme(axis.title = element_text(size=12,face='bold'),
+                axis.text.x = element_text(angle = 90)) + 
+          labs(color='Provincia')
+        plotly::ggplotly(plot)
+        # plotly::plot_ly(bu) %>%
+        #   plotly::add_lines(x = x1, y = y1, name = "Red") 
         
       })
       output$downloadcsv <- 
@@ -100,7 +114,7 @@ tablero_provincial <- function(){
                                                 genero = 'NO',
                                                 universo = input$tabla_universo,
                                                 show_info_DA = F) %>%
-              filter(zona_prov == input$tabla_provincia)
+              filter(zona_prov %in% input$tabla_provincia)
             if(input$tabla_deflactar=='SI'){
               largo_original <- length(bu)
               bu <- deflactar_DA(bu,input$tabla_mes_base)
@@ -123,7 +137,7 @@ tablero_provincial <- function(){
                                                 genero = 'NO',
                                                 universo = input$tabla_universo,
                                                 show_info_DA = F) %>%
-              filter(zona_prov == input$tabla_provincia)
+              filter(zona_prov %in% input$tabla_provincia)
             if(input$tabla_deflactar=='SI'){
               largo_original <- length(bu)
               bu <- deflactar_DA(bu,input$tabla_mes_base)
