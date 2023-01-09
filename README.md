@@ -13,6 +13,8 @@ El paquete actualmente cuenta con las siguientes funciones:
 
 - **`deflactar_DA()`**: permite llevar a precios constantes los valores monetarios de las bases;  
 
+- **`indexador_DA()`**: permite indexar las variables numéricas, de forma tal de relativizarlas respecto al valor máximo, mínimo o una fecha escogida manualmente. 
+
 - **`diccionario_sectores()`**: permite sumar niveles de agregación sectorial a los datos descargados. Por ejemplo, en caso de descargar información a tres dígitos (clae3) con esta función se puede agregar el clae2 y la letra a la que pertenece ese sector, junto con las descripciones de cada desagregación sectorial
 
 - **`dicc_depto_prov()`**: permite agregar fácilmente el departamento y la provincia a la que pertenece cada dato, en caso de estar desagregado a nivel departamental.
@@ -101,6 +103,17 @@ También es posible llevar a precios constantes los valores monetarios, escogien
 # Llevar a precios constantes los valores monetarios 
 test <- descarga_DA(index_base = 1) #Para descargar alguna base que tenga valores monetarios
 test <- deflactar_DA(data = test,mes_base='2022-11-01')
+
+```
+
+Es posible indexar las variables numéricas frente a su respectivo valor máximo, mínimo o alguna fecha en particular (que deberá tener formato YYYY-MM-DD). Esto se realiza con la función ``indexador_DA()``: 
+
+```r
+# Llevar a precios constantes los valores monetarios 
+test <- descarga_DA(index_base = 1) #Para descargar alguna base que tenga valores monetarios
+test <- indexador_DA(data = test,
+                    base_indice='max', # Puede tomar valores 'min' o una fecha en formato YYYY-MM-DD
+                    pisar_datos = F) # Se pisan las variables originales y se las reemplaza por las indexadas.  
 
 ```
 
