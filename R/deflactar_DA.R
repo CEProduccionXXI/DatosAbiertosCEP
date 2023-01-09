@@ -35,7 +35,7 @@ deflactar_DA <- function(data,mes_base,pisar_datos=F){
                                    .names="{.col}_constante"
     ))
     data <- data %>% select(starts_with(variables_base))
-    return(data) 
+    #return(data) 
   } else if (length(variable_actual)>1){
     tmp <- dplyr::filter(ipc_base_2016,fecha == mes_base)
     data <- dplyr::mutate(data,indice_mes_base = tmp$indice)
@@ -55,7 +55,7 @@ deflactar_DA <- function(data,mes_base,pisar_datos=F){
   
   if(length(data) > largo_original & pisar_datos == T){
     data <- data %>%
-      select(-variable_actual)
+      select(-any_of(variable_actual))
     data <- data %>%
       rename_with(~variable_actual,ends_with('_constante'))
   } else {
