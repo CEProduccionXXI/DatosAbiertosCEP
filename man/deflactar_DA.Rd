@@ -4,7 +4,7 @@
 \alias{deflactar_DA}
 \title{Llevar a precios constantes las bases}
 \usage{
-deflactar_DA(data, mes_base)
+deflactar_DA(data, mes_base, pisar_datos = F)
 }
 \arguments{
 \item{data}{Dataframe que se quiere deflactar/inflar}

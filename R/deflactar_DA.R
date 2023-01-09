@@ -11,7 +11,7 @@
 #' @return A matrix of the infile
 #' @export
 
-deflactar_DA <- function(data,mes_base){
+deflactar_DA <- function(data,mes_base,pisar_datos=F){
   #Librerias
   require(DatosAbiertosCEP)
   require(dplyr)
@@ -22,6 +22,8 @@ deflactar_DA <- function(data,mes_base){
   variable_actual <- names(data)
   variables_base <- names(data)
   variable_actual <- variable_actual[variable_actual %in% variables_monetarias]
+  #Guardar largo original de los datos 
+  largo_original <- length(data)
   # Ver si solo hay una variable monetaria o más de una 
   if(length(variable_actual)==1){
     tmp <- dplyr::filter(ipc_base_2016,fecha == mes_base)
@@ -29,8 +31,8 @@ deflactar_DA <- function(data,mes_base){
     data <- dplyr::left_join(data,ipc_base_2016,by='fecha')
     data <- dplyr::mutate(data,indice_mes_base = indice_mes_base / indice)
     data <- data %>% mutate(across(starts_with(variable_actual),
-                             ~ .x *indice_mes_base,
-                             .names="{.col}_constante"
+                                   ~ .x *indice_mes_base,
+                                   .names="{.col}_constante"
     ))
     data <- data %>% select(starts_with(variables_base))
     return(data) 
@@ -43,11 +45,20 @@ deflactar_DA <- function(data,mes_base){
       mutate(across(starts_with(variable_actual),
                     ~ .x *indice_mes_base,
                     .names="{.col}_constante"
-                    ))
+      ))
     data <- data %>% 
       select(starts_with(variables_base))
   } else {
     warning(paste0('La base seleccionada no cuenta con variables que puedan interpretarse como monetarias en esta función.\nPor lo tanto, no se ejecutó ninguna modificación'))
     return(data)
-    }
+  }
+  
+  if(length(data) > largo_original & pisar_datos == T){
+    data <- data %>%
+      select(-variable_actual)
+    data <- data %>%
+      rename_with(~variable_actual,ends_with('_constante'))
+  } else {
+    return(data)
+  }
 }

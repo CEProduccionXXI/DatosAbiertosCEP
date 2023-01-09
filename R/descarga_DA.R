@@ -6,7 +6,7 @@
 #' 
 #' @name descarga_DA
 #' 
-#' @param index Valor que toma la columna en el dataset que se quiere descargar
+#' @param index_base Valor que toma la columna en el dataset que se quiere descargar
 #' @param genero Puede tomar valor SI o NO
 #' @param jurisdiccion Puede tomar los siguientes valores: NO, Departamento vivienda, Provincia trabajo, Departamento fiscal, Provincia vivienda
 #' @param universo Puede tomar los siguientes valores: NO, Privado, Total empresas, Público, Total empleo
@@ -29,7 +29,7 @@ universo_posible <- unique(da_urls$Universo)
 sector_posible <- unique(da_urls$Sector)
 
 # Armar funcion para descargar dato 
-descarga_DA <- function(tipo,genero,jurisdiccion,universo,sector,index_base,show_info_DA=T){
+descarga_DA <- function(index_base,tipo,genero,jurisdiccion,universo,sector,show_info_DA=T){
   if((missing(sector) | missing(universo) | missing(jurisdiccion) | missing(genero) | missing(tipo)) & missing(index_base)) {
     stop("Indicar todos los parámetros: tipo, genero, jurisdiccion, universo y sector. En caso contrario, indicar valor de index")
   } else if ((missing(sector) | missing(universo) | missing(jurisdiccion) | missing(genero) | missing(tipo)) & !missing(index_base)) {
