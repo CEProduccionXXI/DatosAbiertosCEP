@@ -56,8 +56,8 @@ tablero_provincial <- function(){
                    plotly::plotlyOutput('pride_plot')
           )
         ),
-        downloadButton("downloadcsv", "Descargar csv"),
-        downloadButton("downloadxlsx", "Descargar xlsx")
+        downloadButton("downloadcsv", "Descargar .csv"),
+        downloadButton("downloadxlsx", "Descargar .xlsx")
         
       )
     ),
