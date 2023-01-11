@@ -15,7 +15,13 @@ deflactar_DA <- function(data,mes_base,pisar_datos=F){
   #Librerias
   require(DatosAbiertosCEP)
   require(dplyr)
-  load(url('https://github.com/nsidicarocep/DatosAbiertosCEP/blob/main/data/ipc_base_2016.rda?raw=true'))
+  f <- file.path(tempdir(),'ipc_base_2016.rda')
+  if(file.exists(f)){
+    load(f)
+  } else {
+    load(url('https://github.com/nsidicarocep/DatosAbiertosCEP/blob/main/data/ipc_base_2016.rda?raw=true'))
+    save(ipc_base_2016,file = f,version = 2)
+  }
   # Detectar variables salariales 
   variables_monetarias <- c('p10','p25','w_mean','w_median','p75','p90','p99')
   # Elegir variable monetaria presente en la base actual
