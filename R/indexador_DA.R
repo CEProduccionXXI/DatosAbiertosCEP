@@ -22,9 +22,11 @@ indexar_DA <- function(data,base_indice,pisar_datos=F){
   # Elegir variable monetaria presente en la base actual
   variable_actual <- names(data)
   variables_base <- names(data)
-  variables_index <- variable_actual[variable_actual %in% variables_datos_abiertos]
+  #variables_index <- variable_actual[variable_actual %in% variables_datos_abiertos]
+  variables_index <- variable_actual[stringr::str_detect(variable_actual,paste0(variables_datos_abiertos,collapse='|'))]
   variables_index <- variables_index[!variables_index == 'fecha']
-  variables_no_index <- variable_actual[!variable_actual %in% variables_datos_abiertos]
+  #variables_no_index <- variable_actual[!variable_actual %in% variables_datos_abiertos]
+  variables_no_index <- variable_actual[!stringr::str_detect(variable_actual,paste0(variables_datos_abiertos,collapse='|'))]
   if(base_indice == 'max'){
     # Indexar contra valor máximo de cada desagregacion
     tmp <- data %>% 
