@@ -15,4 +15,5 @@ Imports:
 	dplyr,
 	readr, 
 	shiny, 
-	ggplot2
+	ggplot2,
+	jsonlite
