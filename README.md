@@ -121,7 +121,7 @@ Para armar el tablero es necesario ejecutar la función **``tablero_proncial()``
 
 # Datos productivos
 
-El paquete incorpora a su vez datos relevados por el equipo de Coyuntura del CEPXXI, coordinado por Tamara Guler. Estos datos provienen de diferentes fuentes y pueden encontrarse en https://indicadoresargentina.produccion.gob.ar/inicio. 
+El paquete incorpora a su vez datos relevados por el equipo de Coyuntura del CEPXXI, coordinado por Tamara Guler. Estos datos provienen de diferentes fuentes y pueden encontrarse en https://indicadoresargentina.produccion.gob.ar/inicio. La carga de datos a la web corresponde al trabajo realizado por Sol Civale, del equipo de Coyuntura.  
 
 Se puede acceder al listado de series disponibles con el comando **``DPexistentes()``**, donde figura el nombre de la serie, su descripción, la únidad en la que se encuentra, la temporalidad, la fuente y otros datos importantes. Para acceder pueden correr directamente la función o bien guardar el resultado en un elemento: 
 
