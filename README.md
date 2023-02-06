@@ -119,6 +119,23 @@ test <- indexar_DA(data = test,
 
 Para armar el tablero es necesario ejecutar la función **``tablero_proncial()``**. Con esto ya se abrirá el tablero. En caso de que el cuadro abierto quede gris se deberá apretar en "abrir en navegador" para visualizar el tablero. 
 
+# Datos productivos
+
+El paquete incorpora a su vez datos relevados por el equipo de Coyuntura del CEPXXI, coordinado por Tamara Guler. Estos datos provienen de diferentes fuentes y pueden encontrarse en https://indicadoresargentina.produccion.gob.ar/inicio. 
+
+Se puede acceder al listado de series disponibles con el comando **``DPexistentes()``**, donde figura el nombre de la serie, su descripción, la únidad en la que se encuentra, la temporalidad, la fuente y otros datos importantes. Para acceder pueden correr directamente la función o bien guardar el resultado en un elemento: 
+
+```r
+datos_productivos <- DPexistentes()
+```
+
+Una vez seleccionado el dato que se quiere descargar podrán utilizar la función **``descarga_DP()``** para acceder a la serie
+
+```r
+test <- descarga_DP(index=30, # Serie que se quiere descargar, el index proviene de la variable ID de DPexistentes()
+                    show_info_data = T) # Muestra información relevante de la serie (default = T)
+```
+
 ## Aportes 
 El paquete actualmente se encuentra en desarrollo, por lo que se irá actualizando con el correr de los meses. 
 Si encuentran algún error o quieren proponer alguna funcionalidad que no fue tenida en cuenta se agradecerán los comentarios mediante esta plataforma. 
