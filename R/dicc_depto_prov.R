@@ -16,6 +16,7 @@ dicc_depto_prov <- function(data) {
   posibles_agregaciones <- c('codigo_departamento_indec')
   agregacion_actual <- dplyr::select(data,starts_with(posibles_agregaciones))
   agregacion_actual <- names(agregacion_actual)
+  orden_original <- names(data)
   
   # Si los datos tienen alguna agregacion actualmente
   if(length(agregacion_actual) > 0){
@@ -24,6 +25,10 @@ dicc_depto_prov <- function(data) {
     #Joinear con los datos seleccionados 
     data <- merge(data,dicc_depto,by=columnas_agregacion,all.x=T,sort = F)
     data <- dplyr::as_tibble(data)
+    nuevas_columnas <- names(data)
+    nuevas_columnas <- setdiff(nuevas_columnas,orden_original)
+    data <- dplyr::arrange(data,fecha,agregacion_actual)
+    data <- dplyr::relocate(data,orden_original,nuevas_columnas)
     return(data)
   } else {
     stop(paste0('Los datos solicitados no presentan agregación alguna actualmente, por lo que no es posible añadir nuevas agregaciones.'))

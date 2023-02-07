@@ -19,6 +19,7 @@ diccionario_sectores <- function(data, agregacion_deseada = c('clae6','clae3','c
   posibles_agregaciones <- c('clae6','clae3','clae2','letra')
   agregacion_actual <- dplyr::select(data,starts_with(posibles_agregaciones))
   agregacion_actual <- names(agregacion_actual)
+  orden_original <- names(data)
   
   # Si los datos tienen alguna agregacion actualmente
   if(length(agregacion_actual) > 0){
@@ -48,6 +49,10 @@ diccionario_sectores <- function(data, agregacion_deseada = c('clae6','clae3','c
       warning(paste0('La adición de agregaciones sectoriales es posible para categorías más agrupadas de los datos.\nNo es posible añadir una agregación más desagregada que la efectiva de los datos'))
     }
     data <- dplyr::as_tibble(data)
+    nuevas_columnas <- names(data)
+    nuevas_columnas <- setdiff(nuevas_columnas,orden_original)
+    data <- dplyr::arrange(data,fecha,agregacion_actual)
+    data <- dplyr::relocate(data,orden_original,nuevas_columnas)
     return(data)
   } else {
     stop(paste0('Los datos solicitados no presentan agregación alguna actualmente, por lo que no es posible añadir nuevas agregaciones.'))
