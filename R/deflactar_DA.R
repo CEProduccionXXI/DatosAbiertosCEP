@@ -8,10 +8,11 @@
 #' 
 #' @param data Dataframe que se quiere deflactar/inflar
 #' @param mes_base Mes que se quiere utilizar como base para inflar/deflactar. Formato: "YYYY-MM-DD"
+#' @param variables_monetarias Se indica mediante un vector las variables monetarias que se quieren deflactar en la base. Por default se utilizan todas las variables monetarias, en caso de querer deflactar algunas específicas indicarlo en la función. 
 #' @return A matrix of the infile
 #' @export
 
-deflactar_DA <- function(data,mes_base,pisar_datos=F){
+deflactar_DA <- function(data,mes_base,variables_monetarias = c('p10','p25','w_mean','w_median','p75','p90','p99'),pisar_datos=F){
   #Librerias
   require(DatosAbiertosCEP)
   require(dplyr)
@@ -23,7 +24,7 @@ deflactar_DA <- function(data,mes_base,pisar_datos=F){
     save(ipc_base_2016,file = f,version = 2)
   }
   # Detectar variables salariales 
-  variables_monetarias <- c('p10','p25','w_mean','w_median','p75','p90','p99')
+  #variables_monetarias <- c('p10','p25','w_mean','w_median','p75','p90','p99')
   # Elegir variable monetaria presente en la base actual
   variable_actual <- names(data)
   variables_base <- names(data)

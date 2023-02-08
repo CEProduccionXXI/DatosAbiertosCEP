@@ -4,12 +4,19 @@
 \alias{deflactar_DA}
 \title{Llevar a precios constantes las bases}
 \usage{
-deflactar_DA(data, mes_base, pisar_datos = F)
+deflactar_DA(
+  data,
+  mes_base,
+  variables_monetarias = c("p10", "p25", "w_mean", "w_median", "p75", "p90", "p99"),
+  pisar_datos = F
+)
 }
 \arguments{
 \item{data}{Dataframe que se quiere deflactar/inflar}
 
 \item{mes_base}{Mes que se quiere utilizar como base para inflar/deflactar. Formato: "YYYY-MM-DD"}
+
+\item{variables_monetarias}{Se indica mediante un vector las variables monetarias que se quieren deflactar en la base. Por default se utilizan todas las variables monetarias, en caso de querer deflactar algunas específicas indicarlo en la función.}
 }
 \value{
 A matrix of the infile

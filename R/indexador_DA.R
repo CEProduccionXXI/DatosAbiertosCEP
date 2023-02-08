@@ -9,16 +9,17 @@
 #' @param data Dataframe que se quiere indexar
 #' @param base_indice Indica sobre que valor se quiere indexar el dato: min, max o fecha YYYY-MM-DD
 #' @param pisar_datos En caso de ser verdadero se reemplazarán las variables originales por las indexadas. Default FALSE
+#' @param variables_datos_abiertos Vector con variables a indexar. Por default se indexan todas las variables posibles. En caso de querer alguna específica indicarlo en la función. 
 #' @return A matrix of the infile
 #' @export
 
-indexar_DA <- function(data,base_indice,pisar_datos=F){
+indexar_DA <- function(data,base_indice,variables_datos_abiertos = c('p10','p25','w_mean','w_median','p75','p90','p99','puestos','share_mujer','var_facturacion','empresas'),variables_agrupar = '',pisar_datos=F){
   #Librerias
   require(dplyr)
   #Guardar largo original de base
   largo_original <- length(data)
   # Cargar nombre de variables que pueden indexarse
-  variables_datos_abiertos <- c('fecha','p10','p25','w_mean','w_median','p75','p90','p99','puestos','share_mujer','var_facturacion','empresas')
+  
   # Elegir variable monetaria presente en la base actual
   variable_actual <- names(data)
   variables_base <- names(data)
@@ -26,7 +27,12 @@ indexar_DA <- function(data,base_indice,pisar_datos=F){
   variables_index <- variable_actual[stringr::str_detect(variable_actual,paste0(variables_datos_abiertos,collapse='|'))]
   variables_index <- variables_index[!variables_index == 'fecha']
   #variables_no_index <- variable_actual[!variable_actual %in% variables_datos_abiertos]
-  variables_no_index <- variable_actual[!stringr::str_detect(variable_actual,paste0(variables_datos_abiertos,collapse='|'))]
+  if(unique(variables_agrupar == '')) { 
+    variables_no_index <- variable_actual[!stringr::str_detect(variable_actual,paste0(variables_datos_abiertos,collapse='|'))]
+  } else {
+    variables_no_index <- variables_agrupar
+  }
+  variables_no_index_originales <- variable_actual[!stringr::str_detect(variable_actual,paste0(variables_datos_abiertos,collapse='|'))]
   if(base_indice == 'max'){
     # Indexar contra valor máximo de cada desagregacion
     tmp <- data %>% 
@@ -48,7 +54,7 @@ indexar_DA <- function(data,base_indice,pisar_datos=F){
     }
     #Seleccionar columnas originales y las que tienen index
     data <- data %>% 
-      select(fecha,any_of(variables_no_index),any_of(variables_index),ends_with('_index'))
+      select(fecha,any_of(variables_no_index_originales),any_of(variables_index),ends_with('_index'))
   } else if (base_indice == 'min') {
     tmp <- data %>% 
       group_by(across(all_of(variables_no_index))) %>% 
@@ -69,7 +75,7 @@ indexar_DA <- function(data,base_indice,pisar_datos=F){
     }
     #Seleccionar columnas originales y las que tienen index
     data <- data %>% 
-      select(fecha,any_of(variables_no_index),any_of(variables_index),ends_with('_index'))
+      select(fecha,any_of(variables_no_index_originales),any_of(variables_index),ends_with('_index'))
     
   } else if (stringr::str_detect(base_indice,'[0-9]{4}-[0-9]{2}-[0-9]{2}')) {
     
@@ -92,7 +98,7 @@ indexar_DA <- function(data,base_indice,pisar_datos=F){
     }
     #Seleccionar columnas originales y las que tienen index
     data <- data %>% 
-      select(fecha,any_of(variables_no_index),any_of(variables_index),ends_with('_index'))
+      select(fecha,any_of(variables_no_index_originales),any_of(variables_index),ends_with('_index'))
     
   } else {
     warning(paste0('No se detectó correctamente la base indicada para generar el índice.\n 
