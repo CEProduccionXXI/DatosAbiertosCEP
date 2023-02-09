@@ -5,12 +5,21 @@
 \alias{indexar_DA}
 \title{Indexar variables numéricas}
 \usage{
-indexar_DA(data, base_indice, pisar_datos = F)
+indexar_DA(
+  data,
+  base_indice,
+  variables_datos_abiertos = c("p10", "p25", "w_mean", "w_median", "p75", "p90", "p99",
+    "puestos", "share_mujer", "var_facturacion", "empresas"),
+  variables_agrupar = "",
+  pisar_datos = F
+)
 }
 \arguments{
 \item{data}{Dataframe que se quiere indexar}
 
 \item{base_indice}{Indica sobre que valor se quiere indexar el dato: min, max o fecha YYYY-MM-DD}
+
+\item{variables_datos_abiertos}{Vector con variables a indexar. Por default se indexan todas las variables posibles. En caso de querer alguna específica indicarlo en la función.}
 
 \item{pisar_datos}{En caso de ser verdadero se reemplazarán las variables originales por las indexadas. Default FALSE}
 }
