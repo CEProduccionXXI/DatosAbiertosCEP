@@ -131,6 +131,8 @@ El paquete incorpora a su vez datos relevados por el equipo de Coyuntura del CEP
 
 Se puede acceder al listado de series disponibles con el comando **``DPexistentes()``**, donde figura el nombre de la serie, su descripción, la únidad en la que se encuentra, la temporalidad, la fuente y otros datos importantes. Para acceder pueden correr directamente la función o bien guardar el resultado en un elemento: 
 
+**Aclaración**: los valores en pesos constantes se encuentran deflactados contra el último mes disponible, más allá de lo que indique la variable ``um`` de la función ``DPexistentes()``. Esto se debe a un problema en el sistema de carga a la página de donde provienen los datos.  
+
 ```r
 datos_productivos <- DPexistentes()
 ```
