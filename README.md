@@ -112,8 +112,8 @@ test <- deflactar_DA(data = test,
 Es posible indexar las variables numéricas frente a su respectivo valor máximo, mínimo o alguna fecha en particular (que deberá tener formato YYYY-MM-DD). Esto se realiza con la función ``indexar_DA()``: 
 
 ```r
-# Llevar a precios constantes los valores monetarios 
-test <- descarga_DA(index_base = 7) #Para descargar alguna base que tenga valores monetarios
+# Indexar variables seleccionadas 
+test <- descarga_DA(index_base = 7) #Para descargar series
 test <- indexar_DA(data = test,
                     base_indice='max', # Puede tomar valores 'min' o una fecha en formato YYYY-MM-DD
                     variables_datos_abiertos = c('w_mean','p10'), # Vector con variables a indexar. Por default se indexan todas las variables posibles. En caso de querer alguna específica indicarlo en la función. 
