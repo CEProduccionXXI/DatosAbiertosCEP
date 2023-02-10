@@ -13,26 +13,40 @@
 #' @return A matrix of the infile
 #' @export
 
-indexar_DA <- function(data,base_indice,variables_datos_abiertos = c('p10','p25','w_mean','w_median','p75','p90','p99','puestos','share_mujer','var_facturacion','empresas'),variables_agrupar = '',pisar_datos=F){
+indexar_DA <- function(data,base_indice,variables_datos_abiertos = c('p10','p25','w_mean','w_median','p75','p90','p99','puestos','share_mujer','var_facturacion','empresas'),variables_agrupar = 'todas',pisar_datos=F){
   #Librerias
   require(dplyr)
   #Guardar largo original de base
   largo_original <- length(data)
-  # Cargar nombre de variables que pueden indexarse
-  
-  # Elegir variable monetaria presente en la base actual
+  # Elegir variable indexables presente en la base
   variable_actual <- names(data)
   variables_base <- names(data)
-  #variables_index <- variable_actual[variable_actual %in% variables_datos_abiertos]
-  variables_index <- variable_actual[stringr::str_detect(variable_actual,paste0(variables_datos_abiertos,collapse='|'))]
-  variables_index <- variables_index[!variables_index == 'fecha']
-  #variables_no_index <- variable_actual[!variable_actual %in% variables_datos_abiertos]
-  if(unique(variables_agrupar == '')) { 
-    variables_no_index <- variable_actual[!stringr::str_detect(variable_actual,paste0(variables_datos_abiertos,collapse='|'))]
+  
+  # Definir variable con las que se va a agrupar la información
+  if(variables_agrupar == 'todas') {
+    variables_no_index <- variable_actual[!stringr::str_detect(variable_actual,paste0(c('p10','p25','w_mean','w_median','p75','p90','p99','puestos','share_mujer','var_facturacion','empresas'),collapse='|'))]
+    variables_no_index <- variables_no_index[variables_no_index != 'fecha']
+    if(purrr::is_empty(variables_no_index)) { 
+        variables_no_index <- 'temporal'
+        data <- dplyr::mutate(data,temporal = 'temporal')
+      }
+  } else if (variables_agrupar == 'ninguna') {
+    variables_no_index <- 'temporal'
+    data <- dplyr::mutate(data,temporal = 'temporal')
   } else {
     variables_no_index <- variables_agrupar
+    variables_no_index <- variables_no_index[variables_no_index != 'fecha']
+    if(purrr::is_empty(variables_no_index)) { 
+      variables_no_index <- 'temporal'
+      data <- dplyr::mutate(data,temporal = 'temporal')
+    }
   }
+  
+  # Definir variables que se van a indexar 
+  variables_index <- variable_actual[stringr::str_detect(variable_actual,paste0(variables_datos_abiertos,collapse='|'))]
+
   variables_no_index_originales <- variable_actual[!stringr::str_detect(variable_actual,paste0(variables_datos_abiertos,collapse='|'))]
+  
   if(base_indice == 'max'){
     # Indexar contra valor máximo de cada desagregacion
     tmp <- data %>% 
@@ -81,10 +95,13 @@ indexar_DA <- function(data,base_indice,variables_datos_abiertos = c('p10','p25'
     
     tmp <- data %>% 
       filter(fecha == base_indice)
+    tmp <- tmp %>% 
+      select(any_of(variables_index),any_of(variables_no_index))
     new_names <- paste0(variables_index,'_mes')
     tmp <- tmp %>% 
       rename_with(~ new_names, variables_index)
     tmp$fecha <- NULL
+    
     #Joinear para agregar los datos buscados de cada variable 
     data <- data %>% 
       left_join(tmp,by=variables_no_index)
