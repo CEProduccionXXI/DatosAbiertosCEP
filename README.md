@@ -102,7 +102,10 @@ También es posible llevar a precios constantes los valores monetarios, escogien
 ```r
 # Llevar a precios constantes los valores monetarios 
 test <- descarga_DA(index_base = 1) #Para descargar alguna base que tenga valores monetarios
-test <- deflactar_DA(data = test,mes_base='2022-11-01')
+test <- deflactar_DA(data = test,
+                     mes_base='2022-11-01', # Base sobre la que se quiere tener el valor constante de las variables
+                     variables_monetarias = '', # Variables que se desean deflactar. En caso no utilizar el parámetro o dejarlo en blanco, se deflactarán todas
+                     pisar_datos == T) # En caso de ser verdadero se reemplazarán las variables originales por las deflactadas. Por default es falso.  
 
 ```
 
@@ -110,10 +113,13 @@ Es posible indexar las variables numéricas frente a su respectivo valor máximo
 
 ```r
 # Llevar a precios constantes los valores monetarios 
-test <- descarga_DA(index_base = 1) #Para descargar alguna base que tenga valores monetarios
+test <- descarga_DA(index_base = 7) #Para descargar alguna base que tenga valores monetarios
 test <- indexar_DA(data = test,
                     base_indice='max', # Puede tomar valores 'min' o una fecha en formato YYYY-MM-DD
+                    variables_datos_abiertos = c('w_mean','p10'), # Vector con variables a indexar. Por default se indexan todas las variables posibles. En caso de querer alguna específica indicarlo en la función. 
+                    variables_agrupar = c('fecha','sexo'), # Indica las variables que se desean agrupar. Pueden ser 'todas' -que no incluye la fecha', 'ninguna' o un vector con las variables deseadas.
                     pisar_datos = F) # Se pisan las variables originales y se las reemplaza por las indexadas.  
+                    
 
 ```
 
