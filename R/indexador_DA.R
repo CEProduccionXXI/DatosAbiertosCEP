@@ -23,19 +23,18 @@ indexar_DA <- function(data,base_indice,variables_datos_abiertos = c('p10','p25'
   variables_base <- names(data)
   
   # Definir variable con las que se va a agrupar la información
-  if(variables_agrupar == 'todas') {
+  if(unique(variables_agrupar == 'todas')) {
     variables_no_index <- variable_actual[!stringr::str_detect(variable_actual,paste0(c('p10','p25','w_mean','w_median','p75','p90','p99','puestos','share_mujer','var_facturacion','empresas'),collapse='|'))]
     variables_no_index <- variables_no_index[variables_no_index != 'fecha']
     if(purrr::is_empty(variables_no_index)) { 
         variables_no_index <- 'temporal'
         data <- dplyr::mutate(data,temporal = 'temporal')
       }
-  } else if (variables_agrupar == 'ninguna') {
+  } else if (unique(variables_agrupar == 'ninguna')) {
     variables_no_index <- 'temporal'
     data <- dplyr::mutate(data,temporal = 'temporal')
   } else {
     variables_no_index <- variables_agrupar
-    variables_no_index <- variables_no_index[variables_no_index != 'fecha']
     if(purrr::is_empty(variables_no_index)) { 
       variables_no_index <- 'temporal'
       data <- dplyr::mutate(data,temporal = 'temporal')
