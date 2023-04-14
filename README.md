@@ -1,7 +1,7 @@
 # Funciones para acceder fácilmente a los Datos Abiertos del CEP XXI
 
 ## Descripción
-La librería `DatosAbiertosCEP` tiene por objetivo colaborar en el acceso y procesamiento de los datos disponibilizados por el Centro de Estudios para la Producción XXI en la página de Datos Abiertos del Ministerio de Desarrollo Productivo (actualmente perteneciente al Ministerio de Economía).
+La librería `DatosAbiertosCEP` tiene por objetivo colaborar en el acceso y procesamiento de los datos disponibilizados por el Centro de Estudios para la Producción XXI en la página de Datos Abiertos de la Secretaría de Industria y Desarrollo Productivo, del Ministerio de Economía.
 
 Se busca facilitar el accceso a los datos mediante el lenguaje de programación [R](https://www.r-project.org/).
 
@@ -39,7 +39,7 @@ El paquete actualmente se encuentra en desarrollo, por lo que se debe instalar m
 # install.packages('devtools') 
 # si no tiene instalado devtools
 
-devtools::install_github("nsidicarocep/DatosAbiertosCEP")
+devtools::install_github("CEProduccionXXI/DatosAbiertosCEP")
 
 ```
 
