@@ -26,7 +26,7 @@ A su vez, el paquete permite acceder rápidamente al diccionario de departamento
 ## Autores 
 Este paquete surge de un trabajo colectivo del equipo de datos del Centro de Estudios para la Producción XXI, encargado de disponibilizar la información y del armado del paquete. 
 
-El equipo de trabajo está conformado por Pablo Sonzogni, Nicolás Sidicaro, Gisella Pasquariello, Gisel Trebotic, Ignacio Paola y Guido Sanchez.
+El equipo de trabajo está conformado por Pablo Sonzogni, Nicolás Sidicaro, Gisella Pascuariello, Gisel Trebotic, Ignacio Paola y Guido Sanchez.
 
 A su vez, se agradece el acompañamiento y comentarios de Florencia Asef Horno y Daniel Schteingart (directores del CEPXXI que impulsaron la apertura de datos), así como también de Rodrigo Perelsztein y Martín Trombetta (coordinadores del área de datos del CEPXXI). 
 
@@ -127,15 +127,15 @@ Para armar el tablero es necesario ejecutar la función **``tablero_proncial()``
 
 # Datos productivos
 
-El paquete incorpora a su vez datos relevados por el equipo de Coyuntura del CEPXXI, coordinado por Tamara Guler. Estos datos provienen de diferentes fuentes y pueden encontrarse en https://indicadoresargentina.produccion.gob.ar/inicio. La carga de datos a la web corresponde al trabajo realizado por Sol Civale, del equipo de Coyuntura.  
+El paquete incorpora a su vez datos relevados por el equipo de Coyuntura del CEPXXI. Estos datos provienen de diferentes fuentes y pueden encontrarse en https://indicadoresargentina.produccion.gob.ar/inicio.
 
 Se puede acceder al listado de series disponibles con el comando **``DPexistentes()``**, donde figura el nombre de la serie, su descripción, la únidad en la que se encuentra, la temporalidad, la fuente y otros datos importantes. Para acceder pueden correr directamente la función o bien guardar el resultado en un elemento: 
-
-**Aclaración**: los valores en pesos constantes se encuentran deflactados contra el último mes disponible, más allá de lo que indique la variable ``um`` de la función ``DPexistentes()``. Esto se debe a un problema en el sistema de carga a la página de donde provienen los datos.  
 
 ```r
 datos_productivos <- DPexistentes()
 ```
+
+**Aclaración**: los valores en pesos constantes se encuentran deflactados contra el último mes disponible, más allá de lo que indique la variable ``um`` de la función ``DPexistentes()``. Esto se debe a un problema en el sistema de carga a la página de donde provienen los datos.  
 
 Una vez seleccionado el dato que se quiere descargar podrán utilizar la función **``descarga_DP()``** para acceder a la serie
 
