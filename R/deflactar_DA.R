@@ -20,7 +20,7 @@ deflactar_DA <- function(data,mes_base,variables_monetarias = c('p10','p25','w_m
   if(file.exists(f)){
     load(f)
   } else {
-    load(url('https://github.com/nsidicarocep/DatosAbiertosCEP/blob/main/data/ipc_base_2016.rda?raw=true'))
+    load(url('https://github.com/CEProduccionXXI/DatosAbiertosCEP/blob/main/data/ipc_base_2016.rda?raw=true'))
     save(ipc_base_2016,file = f,version = 2)
   }
   # Detectar variables salariales 

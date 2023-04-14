@@ -19,7 +19,7 @@
 
 #Cargar URLs
 #save(datos, file = "data/Descargar DA - URL - Datasets.rda", version = 2)
-load(url('https://github.com/nsidicarocep/DatosAbiertosCEP/blob/main/data/da_urls.rda?raw=true'))
+load(url('https://github.com/CEProduccionXXI/DatosAbiertosCEP/blob/main/data/da_urls.rda?raw=true'))
 
 # Armar listados por tipo de datos 
 nombre_dato <- unique(da_urls$Dato)
