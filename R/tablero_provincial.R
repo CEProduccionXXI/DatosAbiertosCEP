@@ -14,7 +14,7 @@ tablero_provincial <- function(){
   require(ggplot2)
   options(scipen = 999)
   shinyApp(
-    # Define UI for application that draws a histogram
+    # Define UI for application
     ui= fluidPage(
       # Application title
       titlePanel("Datos Abiertos del CEP XXI por Provincia"),
@@ -47,13 +47,13 @@ tablero_provincial <- function(){
         textInput(
           inputId = 'tabla_mes_base',
           label='Mes base: ',
-          value = '2022-09-01'
+          value = '2022-12-01'
         ),
         htmlOutput('text_header'),
         br(),
         tabsetPanel(
           tabPanel('Gráfico',
-                   plotly::plotlyOutput('pride_plot')
+                   plotly::plotlyOutput('plot_da')
           )
         ),
         downloadButton("downloadcsv", "Descargar .csv"),
@@ -63,32 +63,26 @@ tablero_provincial <- function(){
     ),
     server = function(input, output) {
       # Plotear
-      output$pride_plot <- plotly::renderPlotly({
-        bu <- DatosAbiertosCEP::descarga_DA(tipo=input$tabla_dato,
+      output$plot_da <- plotly::renderPlotly({
+        tmp <- DatosAbiertosCEP::descarga_DA(tipo=input$tabla_dato,
                                             jurisdiccion = 'Provincia trabajo',
                                             sector = 'NO',
                                             genero = 'NO',
                                             universo = input$tabla_universo,
                                             show_info_DA = F)
-        bu <- dplyr::filter(bu,zona_prov %in% input$tabla_provincia)
+        tmp <- dplyr::filter(tmp,zona_prov %in% input$tabla_provincia)
         if(input$tabla_deflactar=='SI'){
-          largo_original <- length(bu)
-          bu <- deflactar_DA(bu,input$tabla_mes_base)
-          if(largo_original < length(bu)) {
-            bu[,3] <- NULL
+          largo_original <- length(tmp)
+          tmp <- deflactar_DA(tmp,input$tabla_mes_base)
+          if(largo_original < length(tmp)) {
+            tmp[,3] <- NULL
           }
         }
-        variable <- names(bu[,3])
-        # plotly::plot_ly(
-        #   data = bu,
-        #   x =  bu$fecha,
-        #   y = bu[3],
-        #   type='scatter',
-        #   mode='lines')
-        x1 <- bu[[1]]
-        y1 <- bu[[3]]
+        variable <- names(tmp[,3])
+        x1 <- tmp[[1]]
+        y1 <- tmp[[3]]
         
-        plot <- ggplot(bu,aes(fecha,!!sym(variable))) + 
+        plot <- ggplot(tmp,aes(fecha,!!sym(variable))) + 
           geom_line(aes(color = zona_prov)) +
           scale_x_date(date_breaks = "8 months" , date_labels = "%b-%y") +
           xlab('Mes') + 
@@ -98,8 +92,6 @@ tablero_provincial <- function(){
                 axis.text.x = element_text(angle = 90)) + 
           labs(color='Provincia')
         plotly::ggplotly(plot)
-        # plotly::plot_ly(bu) %>%
-        #   plotly::add_lines(x = x1, y = y1, name = "Red") 
         
       })
       output$downloadcsv <- 
@@ -108,7 +100,7 @@ tablero_provincial <- function(){
             paste(input$tabla_dato, '_', input$tabla_universo, "_", input$tabla_provincia, '_', Sys.Date(), ".csv", sep="")
           },
           content = function(file) {
-            bu <- DatosAbiertosCEP::descarga_DA(tipo=input$tabla_dato,
+            tmp <- DatosAbiertosCEP::descarga_DA(tipo=input$tabla_dato,
                                                 jurisdiccion = 'Provincia trabajo',
                                                 sector = 'NO',
                                                 genero = 'NO',
@@ -116,13 +108,13 @@ tablero_provincial <- function(){
                                                 show_info_DA = F) %>%
               filter(zona_prov %in% input$tabla_provincia)
             if(input$tabla_deflactar=='SI'){
-              largo_original <- length(bu)
-              bu <- deflactar_DA(bu,input$tabla_mes_base)
-              if(largo_original < length(bu)) {
-                bu[,3] <- NULL
+              largo_original <- length(tmp)
+              tmp <- deflactar_DA(tmp,input$tabla_mes_base)
+              if(largo_original < length(tmp)) {
+                tmp[,3] <- NULL
               }
             }
-            write.csv(bu, file)
+            write.csv(tmp, file)
           })
       
       output$downloadxlsx <- 
@@ -131,7 +123,7 @@ tablero_provincial <- function(){
             paste(input$tabla_dato, '_', input$tabla_universo, "_", input$tabla_provincia, '_', Sys.Date(), ".xlsx", sep="")
           },
           content = function(file) {
-            bu <- DatosAbiertosCEP::descarga_DA(tipo=input$tabla_dato,
+            tmp <- DatosAbiertosCEP::descarga_DA(tipo=input$tabla_dato,
                                                 jurisdiccion = 'Provincia trabajo',
                                                 sector = 'NO',
                                                 genero = 'NO',
@@ -139,13 +131,13 @@ tablero_provincial <- function(){
                                                 show_info_DA = F) %>%
               filter(zona_prov %in% input$tabla_provincia)
             if(input$tabla_deflactar=='SI'){
-              largo_original <- length(bu)
-              bu <- deflactar_DA(bu,input$tabla_mes_base)
-              if(largo_original < length(bu)) {
-                bu[,3] <- NULL
+              largo_original <- length(tmp)
+              tmp <- deflactar_DA(tmp,input$tabla_mes_base)
+              if(largo_original < length(tmp)) {
+                tmp[,3] <- NULL
               }
             }
-            openxlsx::write.xlsx(bu, file)
+            openxlsx::write.xlsx(tmp, file)
           })
     }
   ) 
