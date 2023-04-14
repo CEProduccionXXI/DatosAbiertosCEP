@@ -7,9 +7,9 @@ Se busca facilitar el accceso a los datos mediante el lenguaje de programación 
 
 El paquete actualmente cuenta con las siguientes funciones: 
 
-- **`descarga_DA()`**: permite la descarga de cada una de las bases disponibilizadas a través de una serie de parámetros; 
+- **`descarga_DA()`**: permite la descarga de cada una de las bases disponibles a través de una serie de parámetros; 
 
-- **`DA_cruces_existentes()`**: permite ver las diferentes bases disponibilizadas junto a al nivel de desagregación disponible; 
+- **`DA_cruces_existentes()`**: permite ver las diferentes bases disponibles junto a al nivel de desagregación existentes; 
 
 - **`deflactar_DA()`**: permite llevar a precios constantes los valores monetarios de las bases;  
 
@@ -28,7 +28,7 @@ Este paquete surge de un trabajo colectivo del equipo de datos del Centro de Est
 
 El equipo de trabajo está conformado por Pablo Sonzogni, Nicolás Sidicaro, Gisella Pascuariello, Gisel Trebotic, Ignacio Paola y Guido Sanchez.
 
-A su vez, se agradece el acompañamiento y comentarios de Florencia Asef Horno y Daniel Schteingart (directores del CEPXXI que impulsaron la apertura de datos), así como también de Rodrigo Perelsztein y Martín Trombetta (coordinadores del área de datos del CEPXXI). 
+A su vez, se agradece el acompañamiento y comentarios de Florencia Asef Horno y Daniel Schteingart (directores del CEPXXI que impulsaron la apertura de datos). 
 
 ## Instalación
 
