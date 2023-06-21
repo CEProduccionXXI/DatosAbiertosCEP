@@ -30,11 +30,7 @@ El paquete actualmente cuenta con las siguientes funciones:
 A su vez, el paquete permite acceder rápidamente al diccionario de departamentos y de sectores utilizado. Para ello se deberá escribir `dicc_depto` y `dicc_sector` respectivamente. 
 
 ## Autores 
-Este paquete surge de un trabajo colectivo del equipo de datos del Centro de Estudios para la Producción XXI, encargado de disponibilizar la información y del armado del paquete. 
-
-El equipo de trabajo está conformado por Pablo Sonzogni, Nicolás Sidicaro, Gisella Pascuariello, Gisel Trebotic, Ignacio Paola y Guido Sánchez.
-
-A su vez, se agradece el acompañamiento y comentarios de Florencia Asef Horno y Daniel Schteingart (directores del CEP XXI que impulsaron la apertura de datos). 
+Este paquete surge de un trabajo colectivo por parte del equipo de datos del Centro de Estudios para la Producción XXI. El mismo está conformado por Nicolás Sidicaro, Gisella Pascuariello, Gisel Trebotic, Ignacio Paola y Guido Sánchez. A su vez, se agradecen el acompañamiento y comentarios de Pablo Sonzogni (coordinador del área de datos) y Florencia Asef Horno (directora del CEP XXI).
 
 ## Instalación
 
